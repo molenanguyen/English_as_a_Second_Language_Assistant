@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/caption.css" />
+    <title>Image Captioning</title>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script src='./speak.js'></script>
+</head>
+<style>
+
+    body
+    {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background-color:white;
+    }
+
+    .section-head
+    {
+      top: 25%;
+      left: 25%;
+      font size: 18;
+      background-color:Pink Lavender;
+      position: relative;
+    }
+
+    .caption-dev
+    {
+      margin-right: 0px;
+      font size: 18;
+      vertical-align: top;
+      top: 50%;
+      left: 50%;
+      position:relative;
+    }
+
+    .title-area {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background-color: blue;
+      margin-right: 0px;
+      color:White;
+      padding:10px;
+      font size: 18;
+      position:relative;
+      text-align: center;
+    }
+
+    h1
+    {
+      top: 50%;
+      left: 50%;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+
+    .ESLpics
+    {
+      top: 50%;
+      left: 40%;
+      font size: 18;
+      margin-right: 20px;
+      background-color:Pink Lavender;
+      vertical-align: top;
+    }
+
+    .pred-container {
+        margin-bottom: 20px;
+    }
+
+    .pred-container>div {
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: top;
+    }
+
+    .row {
+        display: table-row;
+    }
+
+    .cell {
+        display: table-cell;
+        padding-right: 20px;
+    }
+
+    .picture_pane
+    {
+      top: 50%;
+      left: 20%;
+      position: relative;
+    }
+
+    .upload_img
+    {
+      top: 25%;
+      left: 40%;
+      position: relative;
+    }
+
+    .btn
+    {
+      top: 30%;
+      left: 25%;
+      position: relative;
+    }
+
+    #file-container {
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+  <section class='title-area'>
+      <h1>ESL Assistant</h1>
+  </section>
+
+  <section class='section-head'>
+  <p>Status</p>
+  <div id="txt">Loading Model ... </div>
+  </section>
+
+  <section>
+      <p class='section-head'>
+          After the models are loaded, upload any image and click thegenerate caption!
+      </p>
+  </section>
+  <p class='upload_img'>
+  Upload image: <input type="file" id="imageLoader" name="imageLoader" /><br><br>
+ </p>
+
+
+
+
+
+  <div class="picture_pane">
+  <img src="./globe.jpg" height="350" width="350">
+  <img src="./images/picture.jpg" id="image" height="350" width="350">
+  <img src="./globe.jpg" height="350" width="350"><br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<button  type="button" class="caption-div" id="btn"> Generate Caption</button><br>
+  <br><h4>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; Caption:</h4>
+  <div class="picture_pane" id="caption"></div>
+  <input onclick="myFunction();" type='button' value='🔊 Play' />
+  </div><br>
+
+  <div class='ESLpics'>
+    <img src="./ESL.jpg" height="250" width="580">
+    <img src="./Exchange.jpg"  height="250" width="580">
+    <img src="./ESL2.jpg" height="250" width="580">
+  </div>
+    <div class="tfjs-example-container">
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"></script>
+    <script src="model/word2idx.js"></script>
+    <script src="model/idx2word.js"></script>
+    <script src="js/caption.js"></script>
+</body>
+</html>
