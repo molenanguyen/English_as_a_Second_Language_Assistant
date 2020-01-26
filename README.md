@@ -3,5 +3,5 @@ U.S.-born adults make up two-thirds of adults with low levels of English literac
 
 This is a group project at DerbyHacks2019.
 
-Link original project:
+Link of the original project:
 https://devpost.com/software/eslassistant-english-as-a-second-language-assistant
