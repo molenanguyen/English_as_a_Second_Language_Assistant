@@ -9,8 +9,35 @@ let isModelLoaded = false;
 
 let model;
 let mobileNet;
-
+let count=0;
+var cars = ["picture.jpg","test3.jpg", "test.jpg", "dog.jpg"];
 const maxLen = 40; // 40
+
+function updateimg(command) {
+
+    count=count+1;
+    img.src="./images/".concat(cars[count])
+    if (count<0){
+        count=0;
+    }
+
+    else if(count>(len(cars)-1)){
+        count=count-1;
+    }
+
+}
+
+
+function updateimgback(command) {
+    count=count-1;
+    if (count<0){
+        count=0;
+    }
+    img.src="./images/".concat(cars[count])
+
+}
+
+
 
 function preprocess(imgElement) {
     return tf.tidy(() => {

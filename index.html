@@ -21,7 +21,7 @@
     {
       top: 25%;
       left: 25%;
-      font size: 18;
+      font-size: 18;
       background-color:Pink Lavender;
       position: relative;
     }
@@ -29,7 +29,7 @@
     .caption-dev
     {
       margin-right: 0px;
-      font size: 18;
+      font-size: 18;
       vertical-align: top;
       top: 50%;
       left: 50%;
@@ -42,7 +42,7 @@
       margin-right: 0px;
       color:White;
       padding:10px;
-      font size: 18;
+      font-size: 18;
       position:relative;
       text-align: center;
     }
@@ -58,7 +58,7 @@
     {
       top: 50%;
       left: 40%;
-      font size: 18;
+      font-size: 18;
       margin-right: 20px;
       background-color:Pink Lavender;
       vertical-align: top;
@@ -104,6 +104,13 @@
       position: relative;
     }
 
+    .buttons
+    {
+      top: 50%;
+      left: 5%;
+      position: relative;
+    }
+
     #file-container {
         margin-bottom: 20px;
     }
@@ -121,14 +128,12 @@
 
   <section>
       <p class='section-head'>
-          After the models are loaded, upload any image and click thegenerate caption!
+          After the models are loaded, upload any image and click thegenerate caption! 
       </p>
   </section>
   <p class='upload_img'>
   Upload image: <input type="file" id="imageLoader" name="imageLoader" /><br><br>
  </p>
-
-
 
 
 
@@ -140,6 +145,8 @@
   <br><h4>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; Caption:</h4>
   <div class="picture_pane" id="caption"></div>
   <input onclick="myFunction();" type='button' value='🔊 Play' />
+  <button onclick="updateimg()" type='button'>next<button>
+  <button onclick="updateimgback()" type='button'>prev<button>
   </div><br>
 
   <div class='ESLpics'>
